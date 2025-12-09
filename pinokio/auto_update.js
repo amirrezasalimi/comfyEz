@@ -4,7 +4,7 @@ module.exports = async () => {
 
   const repoUrl = "https://github.com/amirrezasalimi/comfyEz";
   const appDir = "app";
-  const port = 4000; // change if needed
+  const port = 3000; // optional: change your default port if needed
 
   const isWindows = os.platform() === "win32";
   const exists = fs.existsSync(appDir);
@@ -12,13 +12,13 @@ module.exports = async () => {
   const steps = [];
 
   // Step 0: Install Bun if missing
-  const bunCheckCmd = isWindows
-    ? "if (!(Get-Command bun -ErrorAction SilentlyContinue)) { winget install bun }"
+  const bunInstallCmd = isWindows
+    ? 'if (!(Get-Command bun -ErrorAction SilentlyContinue)) { powershell -c "irm bun.sh/install.ps1 | iex" }'
     : "if ! command -v bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; fi";
 
   steps.push({
     method: "shell.run",
-    params: { message: bunCheckCmd },
+    params: { message: bunInstallCmd },
   });
 
   // Step 1: Clone or pull repo
@@ -45,7 +45,7 @@ module.exports = async () => {
     },
   });
 
-  // Step 3: Start the Bun app in dev mode
+  // Step 3: Start the Bun app
   steps.push({
     method: "shell.run",
     params: {
@@ -57,7 +57,7 @@ module.exports = async () => {
   });
 
   return {
-    daemon: true,
+    daemon: true, // keep process running
     run: steps,
   };
 };
