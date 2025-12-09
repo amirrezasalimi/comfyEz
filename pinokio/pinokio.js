@@ -22,6 +22,7 @@ If this is your first time running comfyEz, it will auto-install all dependencie
     {
       text: "Auto Update & Run",
       href: "auto_update.js",
+      port: 3005,
     },
   ],
 };
