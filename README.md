@@ -6,6 +6,25 @@ It abstracts the complex node-based graph into a sleek, professional "Playground
 
 ![ComfyEz](https://via.placeholder.com/800x450.png?text=ComfyEz+Preview)
 
+---
+
+## 📋 Changelog
+
+### Latest Updates
+
+#### 🎯 Infinite Scroll & History Management
+- **Infinite Scroll**: History gallery now supports infinite scrolling for seamless browsing of large image collections
+- **Clear All History**: Added ability to clear entire generation history with one click
+- **New Prompt Manipulation Tools**: Enhanced prompt editing capabilities with additional manipulation options
+- **Backup Service**: Introduced automatic backup service to protect your generation history and settings
+
+#### 🎨 LoRA Explorer Redesign
+- **New LoRA Explorer Design**: Completely redesigned LoRA browsing interface with improved UX
+- Enhanced visual presentation and easier navigation through available LoRA models
+- Better organization and filtering capabilities for large LoRA collections
+
+---
+
 ## ✨ Key Features
 
 ### 🎨 Core Generation
