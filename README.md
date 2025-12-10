@@ -4,26 +4,7 @@
 
 It abstracts the complex node-based graph into a sleek, professional "Playground" UI (similar to commercial AI generators) while retaining the flexibility of ComfyUI through a powerful **Workflow & Node Mapping** system. It also integrates **LLM capabilities** for prompt engineering and complex inpainting tools.
 
-![ComfyEz](https://via.placeholder.com/800x450.png?text=ComfyEz+Preview)
-
----
-
-## 📋 Changelog
-
-### Latest Updates
-
-#### 🎯 Infinite Scroll & History Management
-- **Infinite Scroll**: History gallery now supports infinite scrolling for seamless browsing of large image collections
-- **Clear All History**: Added ability to clear entire generation history with one click
-- **New Prompt Manipulation Tools**: Enhanced prompt editing capabilities with additional manipulation options
-- **Backup Service**: Introduced automatic backup service to protect your generation history and settings
-
-#### 🎨 LoRA Explorer Redesign
-- **New LoRA Explorer Design**: Completely redesigned LoRA browsing interface with improved UX
-- Enhanced visual presentation and easier navigation through available LoRA models
-- Better organization and filtering capabilities for large LoRA collections
-
----
+![ComfyEz](shot.jpg)
 
 ## ✨ Key Features
 
@@ -82,24 +63,32 @@ A dedicated, fully-featured inpainting editor:
 1. **ComfyUI**: You must have [ComfyUI](https://github.com/comfyanonymous/ComfyUI) running locally.
    - Default address: `http://127.0.0.1:8188`
    - **CORS Note**: You may need to run ComfyUI with `--enable-cors-header *` if accessing from a different origin.
-2. **Node.js**: Version 18+ recommended.
+2. **Bun**: You'll need [Bun](https://bun.sh/) installed.
+   - **macOS & Linux**:
+     ```bash
+     curl -fsSL https://bun.com/install | bash
+     ```
+   - **Windows**:
+     ```powershell
+     powershell -c "irm bun.sh/install.ps1|iex"
+     ```
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/comfy-ez.git
-   cd comfy-ez
+   git clone https://github.com/amirrezasalimi/comfyEz.git
+   cd comfyEz
    ```
 
 2. Install dependencies:
    ```bash
-   npm install
+   bun install
    ```
 
 3. Start the development server:
    ```bash
-   npm start
+   bun dev
    ```
 
 ---
@@ -147,6 +136,12 @@ This app allows you to use *any* ComfyUI workflow by "mapping" generic UI contro
 ## 🤝 Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 🙏 Thanks
+
+Made In AI Studio with Gemini 3
 
 ## 📄 License
 
